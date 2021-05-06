@@ -4,10 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/main.scss" />
     <title>Document</title>
   </head>
   <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+        <nav class="nav">
+          <ul class="nav__menu">
+            <li class="nav__list">
+              <a class="nav__link" href="#">o nas</a>
+            </li>
+            <li class="nav__list">
+              <a class="nav__link" href="#">oferta</a>
+            </li>
+            <li class="nav__list">
+              <a class="nav__link" href="#">kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="hamburger">
+          <span class="hamburger__box">
+            <span class="hamburger__inner"></span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="wrapper">
+        <div class="top-bar">
+          <div class="top-bar__icon-box">
+            <img
+              class="top-bar__icon"
+              src="./images//icons/envelop.svg"
+              alt="email icon"
+            />
+            <a class="top-bar__content">example@gmail.com</a>
+          </div>
+          <div class="top-bar__icon-box">
+            <img
+              class="top-bar__icon"
+              src="./images//icons/phone.svg"
+              alt="phone icon"
+            />
+
+            <a class="top-bar__content">796-131-991</a>
+          </div>
+        </div>
+        <div class="hero__content">
+          <h1 class="hero__title"><span>SANTOP</span>Instalacje Sanitarne</h1>
+          <h2 class="hero__subtitle">PROFESJONALNE DORADZTWO I WYKONANIE</h2>
+        </div>
+        <a class="hero__cta" href="#">Dowiedz się wiecej</a>
+      </div>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
