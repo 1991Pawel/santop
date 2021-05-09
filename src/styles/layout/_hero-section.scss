@@ -1,0 +1,51 @@
+@use '../base/variables' as *;
+
+.hero {
+  background-image: url(../images/hero_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 60vh;
+  padding: 10rem 0;
+}
+
+.hero__content {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 700;
+
+  span {
+    font-size: 2rem;
+    display: block;
+    font-weight: 400;
+  }
+}
+
+.hero__subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: rgb(131, 131, 131);
+}
+
+.hero__cta {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  border: 2px solid #58a6ff;
+  padding: 1rem 4rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 3.5rem;
+  font-size: 1.6rem;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: #000;
+}
