@@ -6,6 +6,8 @@
 
   &__wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   &__map {
@@ -43,6 +45,7 @@
   }
   &__info-title {
     margin-bottom: 2rem;
+    text-transform: uppercase;
   }
 
   &__list {
@@ -63,11 +66,12 @@
 }
 
 .form {
+  align-self: flex-start;
   position: relative;
   display: flex;
   flex-direction: column;
   width: 350px;
-  background: #000;
+  background: rgb(73, 73, 73);
   padding: 2rem;
   z-index: 1;
 
