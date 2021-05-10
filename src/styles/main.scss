@@ -4,6 +4,10 @@
 @use './layout/grid' as *;
 @use './layout/header' as *;
 @use './layout/hero-section' as *;
+@use './layout/services' as *;
+@use './layout/about' as *;
+@use './layout/testimonials' as *;
+@use './layout/contact' as *;
 
 * {
   margin: 0;

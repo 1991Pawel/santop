@@ -1,0 +1,32 @@
+@use '../base/variables' as *;
+
+.services {
+  padding: $section-padding;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    height: 100px;
+    width: 100px;
+  }
+
+  &__box {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+  }
+}

@@ -1,0 +1,54 @@
+@use '../base/variables' as *;
+
+.testimonials {
+  padding: $section-padding;
+}
+
+.review {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  &__rating {
+    position: relative;
+    padding: 1rem 0;
+    display: flex;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+
+      bottom: 0;
+      left: 50%;
+      background: $secondary-color;
+      height: 2px;
+      width: 120%;
+      transform: translatex(-50%);
+    }
+  }
+
+  &__rating img {
+    height: 15px;
+    width: 15px;
+    margin-right: 0.2rem;
+  }
+
+  &__author {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__location {
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    margin-top: 2rem;
+    text-align: center;
+    width: 300px;
+  }
+}

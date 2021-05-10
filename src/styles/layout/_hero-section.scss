@@ -1,6 +1,7 @@
 @use '../base/variables' as *;
 
 .hero {
+  position: relative;
   background-image: url(../images/hero_bg.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -18,12 +19,6 @@
 .hero__title {
   font-size: 4rem;
   font-weight: 700;
-
-  span {
-    font-size: 2rem;
-    display: block;
-    font-weight: 400;
-  }
 }
 
 .hero__subtitle {
@@ -37,15 +32,30 @@
   color: #fff;
   font-weight: 400;
   border: 2px solid #58a6ff;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   border-radius: 8px;
   display: inline-block;
-  margin-top: 3.5rem;
-  font-size: 1.6rem;
+  margin-top: 4rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   height: 100%;
   width: 100%;
-  background: #000;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    height: 100px;
+    width: 300px;
+  }
 }

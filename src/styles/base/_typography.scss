@@ -1,4 +1,27 @@
+@use '../base/variables' as *;
+
 body {
   font-size: 1.6rem;
   font-family: 'Oswald', sans-serif;
+}
+
+.section-title {
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 3rem;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 2px;
+    height: 35%;
+    width: 110%;
+    display: block;
+    background: $secondary-color;
+    z-index: -1;
+  }
 }
