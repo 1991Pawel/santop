@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use '../base/breakpoints' as *;
 
 .about {
   background-image: url('../images/about_bg.png');
@@ -8,15 +9,66 @@
   background-size: cover;
   padding: $section-padding;
 
+  &__wrapper {
+    position: relative;
+    @include phone {
+      display: flex;
+      height: 300px;
+    }
+  }
+
   &__content {
     background-color: #fff;
-    padding: 1rem;
+    padding: 2rem;
     font-size: 1.6rem;
+
+    @include tablet {
+      width: 50%;
+    }
+    @include laptop {
+      align-self: center;
+      z-index: 2;
+    }
   }
 
   &__photo {
     height: 200px;
     width: 100%;
+    position: relative;
+
+    @include phone {
+      height: 300px;
+      order: 2;
+    }
+
+    @include tablet {
+      width: 50%;
+    }
+    @include laptop {
+      position: absolute;
+      right: 0;
+      width: 55%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -3.5%;
+      height: 115%;
+      width: 30%;
+      z-index: -1;
+      display: none;
+
+      @include laptop {
+        display: block;
+      }
+
+      background: $primary-color;
+    }
   }
 
   &__img {
