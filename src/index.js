@@ -39,8 +39,26 @@ tl.fromTo('.hero__cta', { y: '-10%', opacity: 0 }, { y: '0%', opacity: 1 });
 gsap.registerPlugin(ScrollTrigger);
 
 const paragraph = document.querySelectorAll('.about__desc');
-
 const photo = document.querySelectorAll('.about__photo');
+const contentBox = document.querySelectorAll('.about__content');
+
+gsap.fromTo(
+  [...contentBox, paragraph],
+  {
+    x: -15,
+    opacity: 0,
+    ease: 'easeInOut',
+  },
+  {
+    x: 0,
+    opacity: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: paragraph,
+      start: 'center 70%',
+    },
+  }
+);
 
 gsap.fromTo(
   photo,
@@ -55,23 +73,7 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       trigger: photo,
-    },
-  }
-);
-
-gsap.fromTo(
-  paragraph,
-  {
-    x: -15,
-    opacity: 0,
-    ease: 'easeInOut',
-  },
-  {
-    x: 0,
-    opacity: 1,
-    stagger: 0.2,
-    scrollTrigger: {
-      trigger: paragraph,
+      start: 'center 80%',
     },
   }
 );
