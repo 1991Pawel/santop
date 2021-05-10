@@ -37,6 +37,29 @@
       opacity: 0.2;
     }
   }
+
+  &__info {
+    margin-top: 3rem;
+  }
+  &__info-title {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    display: block;
+    margin: 1rem;
+  }
+
+  &__icon-img {
+    display: block;
+    height: 25px;
+    width: 25px;
+  }
 }
 
 .form {
