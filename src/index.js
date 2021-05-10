@@ -2,12 +2,19 @@
 
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
+const links = [...document.querySelectorAll('.nav__link')];
 
 const handleClick = () => {
   hamburger.classList.toggle('hamburger--active');
   nav.classList.toggle('nav--active');
 };
 
+const closeMenu = () => {
+  hamburger.classList.remove('hamburger--active');
+  nav.classList.remove('nav--active');
+};
+
+links.forEach((link) => link.addEventListener('click', closeMenu));
 hamburger.addEventListener('click', handleClick);
 
 //smoth scroll
@@ -19,7 +26,7 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
     let targetElement = document.getElementById(href.replace('#', ''));
     const rect = targetElement.getBoundingClientRect().top;
     const offset = window.pageYOffset;
-    const gap = 55;
+    const gap = 52;
     const target = rect + offset - gap;
     window.scrollTo({
       top: target,
