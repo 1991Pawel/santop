@@ -14,8 +14,8 @@ const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
 tl.fromTo(
   '.overlay__logo',
-  { opacity: 0 },
-  { duration: 1, opacity: 1 },
+  { opacity: 0, scale: 0.6 },
+  { duration: 1, scale: 1, opacity: 1 },
   '+=.5'
 );
 
