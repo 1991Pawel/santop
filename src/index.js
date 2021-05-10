@@ -35,3 +35,43 @@ tl.fromTo(
 );
 
 tl.fromTo('.hero__cta', { y: '-10%', opacity: 0 }, { y: '0%', opacity: 1 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+const paragraph = document.querySelectorAll('.about__desc');
+
+const photo = document.querySelectorAll('.about__photo');
+
+gsap.fromTo(
+  photo,
+  {
+    y: -25,
+    opacity: 0,
+    duration: 2,
+    ease: Power1.easeOut,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: photo,
+    },
+  }
+);
+
+gsap.fromTo(
+  paragraph,
+  {
+    x: -15,
+    opacity: 0,
+    ease: 'easeInOut',
+  },
+  {
+    x: 0,
+    opacity: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: paragraph,
+    },
+  }
+);
