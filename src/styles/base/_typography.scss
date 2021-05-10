@@ -11,6 +11,7 @@ body {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 3rem;
+  z-index: 1;
 
   &::before {
     position: absolute;

@@ -1,7 +1,52 @@
+@use '../base/variables' as *;
+
+.contact {
+  background: #f5f5f7;
+  padding: $section-padding;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    z-index: 0;
+
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 1;
+      right: 12%;
+      top: 23%;
+      display: block;
+      height: 15px;
+      width: 15px;
+      background: rgb(202, 7, 7);
+      border-radius: 50%;
+
+      animation: pulse-animation 2s infinite;
+    }
+
+    & img {
+      z-index: -1;
+      height: auto;
+      width: 400px;
+      opacity: 0.2;
+    }
+  }
+}
+
 .form {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 350px;
+  background: #000;
+  padding: 2rem;
+  z-index: 1;
 
   &__submit,
   &__input,
@@ -10,7 +55,7 @@
     border: 1px solid #ccc;
   }
   &__input {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
   }
 
   &__submit {
@@ -23,5 +68,14 @@
 
   &__textarea {
     height: 100px;
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
   }
 }
