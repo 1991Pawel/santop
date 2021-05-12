@@ -76,12 +76,12 @@
 
 .logo {
   height: 45px;
-  width: 130px;
+  width: 135px;
 }
 .logo img {
-  height: 100%;
-  width: 100%;
-  display: block;
+  object-fit: contain;
+  height: 45px;
+  width: 135px;
 }
 
 .header .wrapper {
