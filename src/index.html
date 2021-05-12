@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Santop Instalacje sanitarne.
+    Wycena, doradztwo, kompleksowa realizacja zleceń na terenie województwa podlaskiego."
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
@@ -14,6 +19,25 @@
   </head>
   <body>
     <header class="header">
+      <!-- <div class="top-bar">
+        <div class="top-bar__icon-box">
+          <img
+            class="top-bar__icon"
+            src="./images//icons/envelop.svg"
+            alt="email icon"
+          />
+          <a class="top-bar__content">example@gmail.com</a>
+        </div>
+        <div class="top-bar__icon-box">
+          <img
+            class="top-bar__icon"
+            src="./images//icons/phone.svg"
+            alt="phone icon"
+          />
+
+          <a class="top-bar__content">796-131-991</a>
+        </div> -->
+      </div>
       <div class="wrapper">
         <div class="logo">
           <img src="./images/logo.png" alt="logo" />
@@ -31,7 +55,7 @@
             </li>
           </ul>
         </nav>
-        <button class="hamburger">
+        <button aria-label="mobile menu" class="hamburger">
           <span class="hamburger__box">
             <span class="hamburger__inner"></span>
           </span>
@@ -42,25 +66,6 @@
     <main>
       <section class="hero">
         <div class="wrapper">
-          <div class="top-bar">
-            <div class="top-bar__icon-box">
-              <img
-                class="top-bar__icon"
-                src="./images//icons/envelop.svg"
-                alt="email icon"
-              />
-              <a class="top-bar__content">example@gmail.com</a>
-            </div>
-            <div class="top-bar__icon-box">
-              <img
-                class="top-bar__icon"
-                src="./images//icons/phone.svg"
-                alt="phone icon"
-              />
-
-              <a class="top-bar__content">796-131-991</a>
-            </div>
-          </div>
           <div class="hero__content">
             <h1 class="hero__title">Instalacje Sanitarne</h1>
             <h2 class="hero__subtitle">PROFESJONALNE DORADZTWO I WYKONANIE</h2>
@@ -107,7 +112,7 @@
             <div class="about__photo">
               <img class="about__img" src="./images/about_photo.png" alt="" />
             </div>
-            <div class="about__content">
+            <article class="about__content">
               <p class="about__desc">
                 Santop to grupa specjalistów zajmująca się wykonawstwem usług
                 instalacji sanitarnych, cechuję nas indywidualne podejscie do
@@ -122,7 +127,7 @@
               <p class="about__desc">
                 nasze są realizowanie głownie w obrębie wojewódzctwapodlaskiego.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -193,34 +198,46 @@
               method="POST"
               class="form"
             >
+              <label class="form__label" for="tel">Telefon*</label>
               <input
                 class="form__input"
                 type="text"
                 name="tel"
                 placeholder="Telefon"
+                required
+                id="tel"
               />
+              <label class="form__label" for="name">Imię*</label>
               <input
                 class="form__input"
                 type="text"
                 name="Imie"
-                placeholder="Name"
+                placeholder="Imie"
+                required
+                id="name"
               />
+              <label class="form__label" for="email">E-mail*</label>
               <input
                 class="form__input"
                 type="email"
                 name="email"
+                id="email"
                 placeholder="E-mail"
+                required
               />
+              <label class="form__label" for="message">Wiadomość*</label>
               <textarea
                 class="form__textarea"
                 placeholder="Wiadomość"
+                required
+                id="message"
               ></textarea>
-              <button class="form__submit" type="submit">Wyslij</button>
+              <button class="form__submit" type="submit">Wyślij</button>
             </form>
 
             <ul class="contact__info">
               <li class="contact__list">
-                <h4 class="contact__info-title">Dane kontatkowe</h4>
+                <h3 class="contact__info-title">Dane kontatkowe</h3>
               </li>
               <li class="contact__list">
                 <span class="contact__icon">
@@ -230,7 +247,7 @@
                     alt="icon"
                   />
                 </span>
-                666 666 666
+                <a href="tel:796 131 991">796 131 991</a>
               </li>
               <li class="contact__list">
                 <span class="contact__icon">
@@ -240,7 +257,7 @@
                     alt="icon"
                   />
                 </span>
-                666 666 666
+                <a href="tel:796 131 991">796 131 991</a>
               </li>
               <li class="contact__list">
                 <span class="contact__icon">
@@ -250,7 +267,9 @@
                     alt="icon"
                   />
                 </span>
-                666 666 666
+                <a href="mailto:santop.bialystok@gmail.com"
+                  >santop.bialystok@gmail.com</a
+                >
               </li>
             </ul>
             <div class="contact__map">
