@@ -56,6 +56,12 @@
   font-size: 1.4rem;
   text-transform: uppercase;
   display: inline-block;
+  transition: 0.3s ease-in color;
+}
+
+.hero__cta:hover {
+  background: #58a6ff;
+  color: #000;
 }
 
 .overlay {

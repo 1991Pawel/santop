@@ -133,6 +133,12 @@
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
+
+  transition: 0.3s ease-in color;
+}
+
+.nav__link:hover {
+  color: rgb(136, 135, 135);
 }
 
 @include tablet {
