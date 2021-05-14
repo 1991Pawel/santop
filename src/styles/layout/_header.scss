@@ -173,31 +173,3 @@
     margin: 0;
   }
 }
-
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  height: 30px;
-
-  display: none;
-  justify-content: center;
-  align-items: center;
-
-  @include tablet {
-  }
-}
-
-.top-bar__icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.top-bar__icon {
-  height: 2rem;
-}
-.top-bar__content {
-  margin-left: 1rem;
-}
